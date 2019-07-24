@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>350</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>500</width>
+    <height>350</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>500</width>
+    <height>350</height>
+   </size>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>38</red>
+        <green>38</green>
+        <blue>38</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>38</red>
+        <green>38</green>
+        <blue>38</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>159</red>
+        <green>158</green>
+        <blue>158</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="cursor">
+   <cursorShape>PointingHandCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>Fourier Transfromer</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Fourier.jpeg</normaloff>Fourier.jpeg</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btnStart">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>81</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="text">
+     <string>Start</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>start.svg</normaloff>start.svg</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnPause">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>20</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>Pause</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>index.jpeg</normaloff>index.jpeg</iconset>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnBrowse">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>20</y>
+      <width>161</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Choose Image</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>280</y>
+      <width>431</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="textVisible">
+     <bool>true</bool>
+    </property>
+    <property name="invertedAppearance">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblOriginal">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>250</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Image</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblFft">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>250</y>
+      <width>81</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Image FFT</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="TextBoxPixel">
+    <property name="geometry">
+     <rect>
+      <x>393</x>
+      <y>50</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="integer" stdset="0">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblPixel">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>20</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>num of pixels</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblImg">
+    <property name="geometry">
+     <rect>
+      <x>86</x>
+      <y>106</y>
+      <width>128</width>
+      <height>128</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>128</width>
+      <height>128</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>128</width>
+      <height>128</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblImgFft">
+    <property name="geometry">
+     <rect>
+      <x>286</x>
+      <y>106</y>
+      <width>128</width>
+      <height>128</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>128</width>
+      <height>128</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>128</width>
+      <height>128</height>
+     </size>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="timeText">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>50</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="integer" stdset="0">
+     <number>1</number>
+    </property>
+   </widget>
+   <zorder>lblOriginal</zorder>
+   <zorder>btnStart</zorder>
+   <zorder>lblFft</zorder>
+   <zorder>btnPause</zorder>
+   <zorder>btnBrowse</zorder>
+   <zorder>progressBar</zorder>
+   <zorder>TextBoxPixel</zorder>
+   <zorder>lblPixel</zorder>
+   <zorder>lblImg</zorder>
+   <zorder>lblImgFft</zorder>
+   <zorder>timeText</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
